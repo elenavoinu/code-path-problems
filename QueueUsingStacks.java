@@ -22,7 +22,7 @@ public class QueueUsingStacks {
          Stack<Integer> stack1 = new Stack<>();
          Stack<Integer> stack2 = new Stack<>();
 
-         public  void push(int x) { //enqueue
+         public  void enqueue(int x) { 
              //Move all elements from stack1 to stack2
              while(!stack1.isEmpty()) {
                  stack2.push(stack1.pop());
@@ -36,7 +36,7 @@ public class QueueUsingStacks {
              }
          }
 
-         public  int pop() { //dequeue
+         public  int dequeue() { 
              if(stack1.isEmpty()) return -1;
              return stack1.pop();
          }
@@ -56,22 +56,29 @@ public class QueueUsingStacks {
 
 
 /*
-* U:
-* Implement a queue using stack data structure.
-* to remove an element: Stack empty-> error
-* stack has one element -> remove it
-* M:
-* Queue: FIFO   Stack: LIFO
-*
-* P:
-* Create 2 stacks:
-* Push elements in the first stack
-* To put the element at top of stack1, stack2 is used.
-*
-* push method:
-* iterate over the stack1 while the size is greater than 0
-* push everything from stack1 to stack2.
-*
-*
-*
+Constructor
+1) Create 2 Stacks, a main and a side
+
+Push
+1) Push elements onto the main Stack, never the side
+
+Pop/Poll
+1) Pop all elements off of the main Stack onto the side Stack, this reverses
+    element order to that of a Queue
+2) Pop top off side Stack into temporary variable
+3) Push all other elements from side stack onto main Stack, re-reversing elements
+4) Return element in temporary variable
+
+Peek
+1) Return the first element in the main Stack by indexing (since DS is array)
+
+Empty
+1) Return True if the length of the main Stack is 0, else False
+
+Push/Enqueue Time Complexity: O(1)
+Pop/Dequeue Time Complexity: O(N)
+Peek Time Complexity: O(1) - Python, O(N) - Java
+Empty Time Complexity: O(1)
+Space Complexity: O(N)
+
 * */
