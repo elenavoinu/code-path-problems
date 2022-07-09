@@ -1,3 +1,6 @@
+//very expensive implementation and most likely never used in real life.
+//Implementation solely for exercising purposes
+
 package week6Session2;
 import java.util.Stack;
 
