@@ -1,4 +1,4 @@
-package week6Session2;
+//working with stacks
 
 import java.util.HashMap;
 import java.util.Map;
