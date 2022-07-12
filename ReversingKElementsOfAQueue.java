@@ -24,7 +24,23 @@ public class ReversingKElementsOfAQueue {
     }
 
     public static void reverse(Queue<Integer> queue, int k) {
+         if(queue.isEmpty() || k > queue.size())
+            System.out.println("queue" + queue + " is empty");
+        if(k <= 0)
+            System.out.println("k must be greater than zero");
 
+        Stack<Integer> stack = new Stack<>();
+        for(int i = 0; i < k; i++) {
+            stack.push(queue.remove());
+        }
+
+        while(!stack.isEmpty()) {
+            queue.add(stack.pop());
+        }
+
+        for(int i = 0; i < queue.size() - k; i++) {
+            queue.add(queue.remove());
+        }
     }
 }
 
