@@ -55,7 +55,7 @@ U: string consists just of these characters '(', ')', '{', '}', '[', ']',
  return stack.empty()
 
  E:
- O(n) time and sapce somplexity
+ O(n) time and space complexity
 
 
 * */
