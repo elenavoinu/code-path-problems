@@ -1,4 +1,3 @@
-package Week4Session2;
 
 public class Homeworkweek4 {
     static class Node {
@@ -39,7 +38,6 @@ public class Homeworkweek4 {
         head.next = newNode(2);
         head.next.next = newNode(3);
         head.next.next.next = newNode(4);
-      //head.next.next.next.next = newNode(5);
 
         System.out.println("Given Linked List");
         printlist(head);
