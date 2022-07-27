@@ -1,6 +1,3 @@
-package week7Session1;
-
-
 public class ShortestUnsortedSubarray {
     public static void main(String[] args) {
         int [] array = new int[]{1, 2, 5, 3, 7, 10, 9, 12};
