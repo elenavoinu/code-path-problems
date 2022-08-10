@@ -1,4 +1,3 @@
-package week7Session2;
 
 public class ReverseWordsInAString {
     public static void main(String[] args) {
