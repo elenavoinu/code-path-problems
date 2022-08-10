@@ -1,4 +1,3 @@
-package week8;
 
 import java.util.Arrays;
 
