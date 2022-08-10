@@ -1,4 +1,3 @@
-package week7Session2;
 
 import java.util.HashMap;
 
@@ -58,5 +57,4 @@ calculate the maximum length using Math.max built-in method
 E:
 O(n) time complexity where n is the characters in the string
 O(K) as we will be storing k characters in the hash map
-
  */
