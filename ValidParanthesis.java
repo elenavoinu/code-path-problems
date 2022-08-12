@@ -10,6 +10,7 @@ public class ValidParanthesis {
         String string = "'(', ')', '{', '}', '[', ']'";
         System.out.println(isValidString(string));
     }
+    
     public static boolean isValidString(String str){
         Stack<Character> stack = new Stack<>();
         for(char ch : str.toCharArray()) {
@@ -17,12 +18,11 @@ public class ValidParanthesis {
                 stack.push(ch);
             else if(ch == ')' && !stack.isEmpty() && stack.peek() == '(') 
                 stack.pop();
-            else if(ch == ']' && !stack.isEmpty() && stack.peek() == '['){
+            else if(ch == ']' && !stack.isEmpty() && stack.peek() == '[')
                 stack.pop();
-            }
-            else if(ch == '}' && !stack.isEmpty() && stack.peek() =='{') {
+            
+            else if(ch == '}' && !stack.isEmpty() && stack.peek() =='{') 
                 stack.pop();
-            }
             else return false;
         }
         
