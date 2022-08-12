@@ -11,12 +11,21 @@ public class ValidParanthesis {
         System.out.println(isValidString(string));
     }
     public static boolean isValidString(String str){
-        Stack<Character> stack = new Stack();
-        for(Character ch : s.toCharArray()){
-            if(ch == ')' &&  !stack.isEmpty() && stack.peek()== '('){
+        Stack<Character> stack = new Stack<>();
+        for(char ch : str.toCharArray()) {
+            if(ch == '(' || ch == '[' || ch =='{')
+                stack.push(ch);
+            else if(ch == ')' && !stack.isEmpty() && stack.peek() == '(') 
+                stack.pop();
+            else if(ch == ']' && !stack.isEmpty() && stack.peek() == '['){
                 stack.pop();
             }
+            else if(ch == '}' && !stack.isEmpty() && stack.peek() =='{') {
+                stack.pop();
+            }
+            else return false;
         }
+        
        return stack.empty();
     }
 }
